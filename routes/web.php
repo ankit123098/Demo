@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.login');
+});
+
+Route::post('/login','Admin\LoginController@Login');
+Route::group(['middleware'=>'App\Http\Middleware\AdminLogin'],function(){
+	Route::get('/dashboard','Admin\LoginController@Dashboard');
 });
