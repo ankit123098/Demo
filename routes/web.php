@@ -20,7 +20,7 @@ Route::get('m-i-g-r-a-t-e',function() {
 Route::get('/', function () {
     return view('layouts.login');
 });
-
+Route::get('/logout','Admin\LoginController@Logout');
 Route::post('/login','Admin\LoginController@Login');
 Route::group(['middleware'=>'App\Http\Middleware\AdminLogin'],function(){
 	Route::get('/dashboard','Admin\LoginController@Dashboard');

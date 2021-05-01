@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 
 class LoginController extends Controller
 {
@@ -43,5 +44,10 @@ class LoginController extends Controller
     public function Dashboard(){
         $data['title'] = 'Dashboard';
         return view('dashboard')->with($data);
+    }
+
+    public function logout(){
+        session::flush();
+        return \Redirect('/');
     }
 }

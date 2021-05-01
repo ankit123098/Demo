@@ -126,6 +126,11 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>-->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/logout')}}">
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
