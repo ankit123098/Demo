@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('m-i-g-r-a-t-e',function() {
+	Artisan::call('migrate');
+});
+
 Route::get('/', function () {
     return view('layouts.login');
 });
