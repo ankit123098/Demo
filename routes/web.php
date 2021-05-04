@@ -24,4 +24,5 @@ Route::get('/logout','Admin\LoginController@Logout');
 Route::post('/login','Admin\LoginController@Login');
 Route::group(['middleware'=>'App\Http\Middleware\AdminLogin'],function(){
 	Route::get('/admin/dashboard','Admin\LoginController@Dashboard');
+	Route::get('/admin/states','Admin\LocationController@stateList');
 });

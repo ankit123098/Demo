@@ -6,13 +6,16 @@
   <title>{{ $title }}</title>
 
   <!-- Google Font: Source Sans Pro -->
-   <link rel="icon" type="image/png" href="{{ asset('public/bower_components/dist/images/favicon.ico')}}"/>
+  <link rel="icon" type="image/png" href="{{ asset('public/bower_components/dist/images/favicon.ico')}}"/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('public/bower_components/dist/css/all.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DATA TABLES -->
+  <link href="{{ asset('public/bower_components/dist/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ asset('public/bower_components/dist/datatables/dataTables.responsive.css') }}" rel="stylesheet" type="text/css" />
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset('public/bower_components/dist/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
@@ -178,6 +181,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ url('/admin/states')}}" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Manage State
+              </p>
+            </a>
+          </li>
           <li class="nav-item menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -228,6 +239,10 @@
 <script src="{{ asset('public/bower_components/dist/js/Chart.min.js')}}"></script>
 <!-- Sparkline -->
 <script src="{{ asset('public/bower_components/dist/js/sparkline.js')}}"></script>
+<!-- DATA TABES SCRIPT -->
+<script src="{{ asset('public/bower_components/dist/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('public/bower_components/dist/js/dataTables.bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('public/bower_components/dist/js/dataTables.responsive.min.js') }}" type="text/javascript"></script>
 <!-- JQVMap -->
 <script src="{{ asset('public/bower_components/dist/js/jquery.vmap.min.js')}}"></script>
 <script src="{{ asset('public/bower_components/dist/js/jquery.vmap.usa.js')}}"></script>
