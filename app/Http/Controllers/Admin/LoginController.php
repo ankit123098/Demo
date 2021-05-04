@@ -33,7 +33,7 @@ class LoginController extends Controller
     	if($validator->passes()){
     		if($user){
     		  session()->put('admin',$user->id);
-              return \Redirect::to('/dashboard');
+              return \Redirect::to('/admin/dashboard');
     		}
     	}
         else{
@@ -48,6 +48,6 @@ class LoginController extends Controller
 
     public function logout(){
         session::flush();
-        return \Redirect('/');
+        return \Redirect('/admin');
     }
 }
